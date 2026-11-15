@@ -1,0 +1,69 @@
+import csv
+import os
+
+# Step 1: Write data to a text file
+try:
+    with open("sample.txt", "w") as file:
+        file.write("Python File Handling\n")
+        file.write("This is my Day 4 Internship Task.\n")
+
+    print("Text file created successfully.")
+
+except Exception as e:
+    print("Error writing file:", e)
+
+
+# Step 2: Read data from a text file
+try:
+    with open("sample.txt", "r") as file:
+        content = file.read()
+
+    print("\nText File Content:")
+    print(content)
+
+except FileNotFoundError:
+    print("Text file not found.")
+
+
+# Step 3: Create a CSV file
+try:
+    with open("students.csv", "w", newline="") as file:
+        writer = csv.writer(file)
+
+        writer.writerow(["Name", "Marks"])
+        writer.writerow(["Priya", 85])
+        writer.writerow(["Amit", 90])
+        writer.writerow(["Sneha", 78])
+
+    print("CSV file created successfully.")
+
+except Exception as e:
+    print("Error creating CSV:", e)
+
+
+# Step 4: Read and process the CSV file
+try:
+    if os.path.exists("students.csv"):
+        with open("students.csv", "r", newline="") as file:
+            reader = csv.DictReader(file)
+
+            print("\nStudent Records:")
+
+            for row in reader:
+                try:
+                    name = row["Name"]
+                    marks = float(row["Marks"])
+
+                    print(name, "-", marks)
+
+                except (ValueError, KeyError):
+                    print("Invalid student data:", row)
+
+    else:
+        print("CSV file does not exist.")
+
+except (OSError, csv.Error) as e:
+    print("Error reading CSV:", e)
+
+finally:
+    print("\nFile handling task completed.")

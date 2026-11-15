@@ -1,0 +1,11 @@
+Customer_ID,Name,City,Age,Join_Date,Purchase_Amount
+101,Asha,Pune,25,2024-01-10,1200.5
+102,Rahul, pune ,,15/02/2024,850
+103,Meena,MUMBAI,31,2024/03/05,
+104,Vikram,Nashik,28,not available,2100
+104,Vikram,Nashik,28,not available,2100
+105,Neha,pune,22,2024-04-12,500
+106,Rohan,Mumbai,200,2024-05-01,999
+107,Isha,NASHIK,35,2024-05-18,1500
+108,Arjun,,27,2024-06-02,780
+109,Kiran,Pune,,2024-06-15,450

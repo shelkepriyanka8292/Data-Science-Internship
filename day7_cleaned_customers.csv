@@ -1,0 +1,10 @@
+Customer_ID,Name,City,Age,Join_Date,Purchase_Amount
+101,Asha,Pune,25.0,2024-10-01,1200.5
+102,Rahul,Pune,27.5,2024-02-15,850.0
+103,Meena,Mumbai,31.0,2024-05-03,924.5
+104,Vikram,Nashik,28.0,,2100.0
+105,Neha,Pune,22.0,2024-12-04,500.0
+106,Rohan,Mumbai,27.5,2024-01-05,999.0
+107,Isha,Nashik,35.0,2024-05-18,1500.0
+108,Arjun,Pune,27.0,2024-02-06,780.0
+109,Kiran,Pune,27.5,2024-06-15,450.0

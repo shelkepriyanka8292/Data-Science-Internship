@@ -1,0 +1,88 @@
+#Program 1: Create a NumPy Array
+import numpy as np
+
+# One-dimensional array
+arr1 = np.array([10, 20, 30, 40, 50])
+print("One-dimensional array:", arr1)
+
+# Two-dimensional array
+arr2 = np.array([[1, 2, 3], [4, 5, 6]])
+print("Two-dimensional array:\n", arr2)
+
+
+#Program 2: Indexing and Slicing
+import numpy as np
+
+arr = np.array([10, 20, 30, 40, 50])
+
+print("First element:", arr[0])
+print("Third element:", arr[2])
+print("Sliced array:", arr[1:4])
+
+
+#Program 3: Filtering Array
+import numpy as np
+
+arr = np.array([10, 20, 30, 40, 50])
+
+result = arr[arr > 25]
+
+print("Filtered array:", result)
+
+
+#Program 4: Reshape an Array
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6])
+
+new_arr = arr.reshape(2, 3)
+
+print("Reshaped array:\n", new_arr)
+
+
+#Program 5: Sum, Mean, Minimum and Maximum
+import numpy as np
+
+arr = np.array([10, 20, 30, 40, 50])
+
+print("Sum:", np.sum(arr))
+print("Mean:", np.mean(arr))
+print("Minimum:", np.min(arr))
+print("Maximum:", np.max(arr))
+print("Standard Deviation:", np.std(arr))
+
+
+#Program 6: Compare Python and NumPy Operations
+import numpy as np
+
+numbers = [10, 20, 30]
+python_result = [x * 2 for x in numbers]
+
+arr = np.array([10, 20, 30])
+numpy_result = arr * 2
+
+print("Python result:", python_result)
+print("NumPy result:", numpy_result)
+
+
+#Program 7: Array Addition
+import numpy as np
+
+arr1 = np.array([10, 20, 30])
+arr2 = np.array([1, 2, 3])
+
+result = arr1 + arr2
+
+print("Addition:", result)
+
+
+#Program 8: Two-Dimensional Array Operations
+import numpy as np
+
+arr = np.array([[10, 20, 30],
+                [40, 50, 60]])
+
+print("Array:\n", arr)
+print("Total Sum:", np.sum(arr))
+print("Column Sum:", np.sum(arr, axis=0))
+print("Row Sum:", np.sum(arr, axis=1))

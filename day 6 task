@@ -1,0 +1,102 @@
+import pandas as pd
+import os
+
+# Step 1: Create a sample dataset
+data = {
+    "Name": ["Priya", "Amit", "Sneha", "Rahul", "Neha"],
+    "Age": [22, 25, 21, None, 24],
+    "Marks": [85, 90, 78, 88, None],
+    "City": ["Pune", "Mumbai", "Nashik", "Pune", "Mumbai"]
+}
+
+df = pd.DataFrame(data)
+
+# Save dataset as CSV
+df.to_csv("students.csv", index=False)
+
+# Save dataset as Excel
+df.to_excel("students.xlsx", index=False)
+
+print("Dataset created successfully.")
+
+# Step 2: Load CSV file
+df = pd.read_csv("students.csv")
+
+print("\n1. Dataset:")
+print(df)
+
+# Step 3: Display first five rows
+print("\n2. First five rows:")
+print(df.head())
+
+# Step 4: Display last five rows
+print("\n3. Last five rows:")
+print(df.tail())
+
+# Step 5: Display dataset information
+print("\n4. Dataset Information:")
+df.info()
+
+# Step 6: Display statistical summary
+print("\n5. Statistical Summary:")
+print(df.describe())
+
+# Step 7: Count rows and columns
+print("\n6. Number of Rows:", df.shape[0])
+print("Number of Columns:", df.shape[1])
+
+# Step 8: Display column names
+print("\n7. Column Names:")
+print(df.columns.tolist())
+
+# Step 9: Select a single column
+print("\n8. Student Names:")
+print(df["Name"])
+
+# Step 10: Select multiple columns
+print("\n9. Names and Marks:")
+print(df[["Name", "Marks"]])
+
+# Step 11: Check missing values
+print("\n10. Missing Values:")
+print(df.isnull().sum())
+
+# Step 12: Check duplicate rows
+print("\n11. Duplicate Rows:")
+print(df.duplicated().sum())
+
+# Step 13: Check invalid values
+print("\n12. Invalid Age Values:")
+print(df[df["Age"].notna() & ((df["Age"] < 1) | (df["Age"] > 120))])
+
+# Step 14: Load Excel file
+print("\n13. Loading Excel File:")
+if os.path.exists("students.xlsx"):
+    excel_df = pd.read_excel("students.xlsx")
+    print(excel_df.head())
+else:
+    print("Excel file not found.")
+
+# Step 15: Create a Data Dictionary
+data_dictionary = pd.DataFrame({
+    "Column Name": ["Name", "Age", "Marks", "City"],
+    "Description": [
+        "Student's name",
+        "Student's age in years",
+        "Student's marks",
+        "Student's city"
+    ],
+    "Data Type": [
+        "Text",
+        "Numeric",
+        "Numeric",
+        "Text"
+    ]
+})
+
+data_dictionary.to_csv("data_dictionary.csv", index=False)
+
+print("\n14. Data Dictionary:")
+print(data_dictionary)
+
+print("\nDay 6 Task Completed Successfully!")

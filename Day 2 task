@@ -1,0 +1,44 @@
+#Program 1: Calculate Percentage
+total_marks = 500
+obtained_marks = 425
+
+percentage = (obtained_marks / total_marks) * 100
+
+print("Percentage:", percentage, "%")
+
+#Program 2: Calculate Sales Total
+price = 200
+quantity = 5
+
+total_sales = price * quantity
+
+print("Total Sales:", total_sales)
+
+#Program 3: Calculate Discount
+price = 1000
+discount = 10
+
+discount_amount = (price * discount) / 100
+final_price = price - discount_amount
+
+print("Discount Amount:", discount_amount)
+print("Final Price:", final_price)
+
+#Program 4: Calculate Average
+a = 70
+b = 80
+c = 90
+
+average = (a + b + c) / 3
+
+print("Average:", average)
+
+
+#Program 5: User Input and Type Conversion
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+total = num1 + num2
+
+print("Sum:", total)
+

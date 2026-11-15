@@ -1,0 +1,72 @@
+#Program 1: Check Even or Odd
+num = 10
+
+if num % 2 == 0:
+    print("Even Number")
+else:
+    print("Odd Number")
+
+
+#Program 2: Find the Largest of Three Numbers
+a = 10
+b = 25
+c = 15
+
+if a >= b and a >= c:
+    print("Largest:", a)
+elif b >= a and b >= c:
+    print("Largest:", b)
+else:
+    print("Largest:", c)
+
+
+#Program 3: Print Numbers Using a For Loop
+for i in range(1, 11):
+    print(i)
+
+
+#Program 4: Print Numbers Using a While Loop
+i = 1
+
+while i <= 5:
+    print(i)
+    i += 1
+
+
+#Program 5: Calculate the Sum of a List
+numbers = [10, 20, 30, 40, 50]
+
+total = sum(numbers)
+
+print("Total:", total)
+
+
+#Program 6: Remove Duplicates from a List
+numbers = [10, 20, 10, 30, 20, 40]
+
+unique_numbers = list(set(numbers))
+
+print("Unique Numbers:", sorted(unique_numbers))
+
+
+#Program 7: Create a Function
+def add(a, b):
+    return a + b
+
+result = add(10, 20)
+
+print("Sum:", result)
+
+
+#Program 8: Count Categories Using a Dictionary
+students = ["A", "B", "A", "C", "B", "A"]
+
+category_count = {}
+
+for category in students:
+    if category in category_count:
+        category_count[category] += 1
+    else:
+        category_count[category] = 1
+
+print(category_count)
